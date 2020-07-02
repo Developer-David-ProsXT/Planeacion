@@ -8,6 +8,7 @@ select * from semanas;
 select * from unidades;
 select * from catalogo;
 
+
 select m.nombre, u.nombre, u.topics, u.learning, u.resources, u.material from Unidades as u
 inner join Materias as m on u.id_materia = m.id where u.id_materia = 5;
 
