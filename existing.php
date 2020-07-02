@@ -1,5 +1,10 @@
 <?php
     include 'config.php';
+    
+    if(isset($_POST['btn_exportar_tabla'])){
+        $command = "C:\\Users\\progr\\source\\repos\\CPlaneacion\\CPlaneacion\\bin\\Debug\\CPlaneacion.exe 2";
+        exec($command);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +19,11 @@
     </head>
     <body>
         <h1>Planning catalog</h1>
-        <br><br>
+        <form action="existing.php" method="POST">
+            <br>
+                <input class="btn btn-primary btn-lg" type="submit" name="btn_exportar_tabla" value="Exportar Catalogo Completo">
+            <br><br>
+        </form>
         <table class="table table-bordered">
             <thead>
                 <tr>
